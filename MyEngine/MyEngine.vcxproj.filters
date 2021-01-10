@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="MyEngine">
+      <UniqueIdentifier>{01CCBB96-ED98-16A2-16B2-044A02DE4B30}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\MyEngine.h" />
+    <ClInclude Include="src\MyEngine\Application.h">
+      <Filter>MyEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MyEngine\Core.h">
+      <Filter>MyEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MyEngine\EntryPoint.h">
+      <Filter>MyEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MyEngine\Log.h">
+      <Filter>MyEngine</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\MyEngine\Application.cpp">
+      <Filter>MyEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MyEngine\Log.cpp">
+      <Filter>MyEngine</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
