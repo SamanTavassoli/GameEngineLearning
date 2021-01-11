@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace MyEngine {
 	
 	class MyEngine_API WindowResizeEvent : public Event

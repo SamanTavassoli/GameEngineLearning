@@ -18,6 +18,9 @@ project "MyEngine"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "mepch.h"
+	pchsource "MyEngine/src/mepch.cpp"
+
 	files
 	{
 		"%{prj.name}/src/**.h";

@@ -2,9 +2,6 @@
 
 #include "MyEngine/Core.h"
 
-#include <string>
-#include <functional>
-
 namespace MyEngine {
 
 	// Events in MyEngine are currently blocking, meaning when an event occurs it
