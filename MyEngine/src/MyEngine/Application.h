@@ -2,6 +2,7 @@
 
 #include "Core.h"
 #include "Events/Event.h"
+#include "Window.h"
 
 namespace MyEngine {
 
@@ -13,6 +14,9 @@ namespace MyEngine {
 		virtual ~Application();
 
 		void Run();
+	private:
+		std::unique_ptr<Window> m_Window; // unique because window only exists in application scope
+		bool m_Running = true;
 	};
 
 	// To be defined in CLIENT
