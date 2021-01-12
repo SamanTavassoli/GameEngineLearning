@@ -28,6 +28,7 @@ namespace MyEngine {
 		GLFWwindow* m_Window;
 
 		// only need to pass this struct to convey data, not entire class
+
 		struct WindowData
 		{
 			std::string Title;

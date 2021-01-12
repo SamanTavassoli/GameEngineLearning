@@ -25,6 +25,8 @@ namespace MyEngine {
 	class MyEngine_API Window
 	{
 	public:
+		// can provide an event call back function to the window so
+		// that the window can call that function whenever an event occurs
 		using EventCallbackFn = std::function<void(Event&)>;
 
 		virtual ~Window() {}

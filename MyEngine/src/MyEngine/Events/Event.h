@@ -58,9 +58,10 @@ namespace MyEngine {
 		bool m_Handled = false;
 	};
 
+	// This calls allows us to provide IT functions that will run when certain events occur
 	class EventDispatcher {
 		template<typename T>
-		using EventFn = std::function<bool(T&)>; // T will be an Event Type ex. WindowResize
+		using EventFn = std::function<bool(T&)>; // describing the type of function that can be passed in
 	public:
 		EventDispatcher(Event& event)
 			: m_Event(event)
@@ -68,9 +69,12 @@ namespace MyEngine {
 		}
 
 		template<typename T>
-		bool Dispatch(EventFn<T> func) // not sure exactly how it works but makes calling functions based on event types easier
+		bool Dispatch(EventFn<T> func)
 		{
-			if (m_Event.GetEventType() == T::GetStaticType())
+			// because we pass in a static type to the function, whenever we get an incoming event
+			// we check if the event is of the same type as the static type passed in and if so
+			// we execute the function on the event casted to the static type provided
+			if (m_Event.GetEventType() == T::GetStaticType()) // we don't compare classes here, just the enum for event types we declared
 			{
 				m_Event.m_Handled = func(*(T*)&m_Event); // cast m_Event to type T and dereference and apply func to it
 				return true;
