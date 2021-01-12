@@ -4,6 +4,7 @@
 // For use by MyEngine Applications
 
 #include "MyEngine/Application.h"
+#include "MyEngine/Layer.h"
 #include "MyEngine/Log.h"
 
 // ------Entry Point-----------

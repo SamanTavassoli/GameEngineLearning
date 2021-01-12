@@ -37,6 +37,12 @@
     <ClInclude Include="src\MyEngine\Events\MouseEvent.h">
       <Filter>MyEngine\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\MyEngine\Layer.h">
+      <Filter>MyEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MyEngine\LayerStack.h">
+      <Filter>MyEngine</Filter>
+    </ClInclude>
     <ClInclude Include="src\MyEngine\Log.h">
       <Filter>MyEngine</Filter>
     </ClInclude>
@@ -50,6 +56,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\MyEngine\Application.cpp">
+      <Filter>MyEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MyEngine\Layer.cpp">
+      <Filter>MyEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MyEngine\LayerStack.cpp">
       <Filter>MyEngine</Filter>
     </ClCompile>
     <ClCompile Include="src\MyEngine\Log.cpp">

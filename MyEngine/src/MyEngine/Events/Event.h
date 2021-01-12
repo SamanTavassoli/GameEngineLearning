@@ -41,8 +41,10 @@ namespace MyEngine {
 
 	class MyEngine_API Event
 	{
-		friend class EventDispatcher;
 	public:
+
+		bool Handled = false;
+
 		// these virtual functions wil need to be implemented by the subclasses
 		// note that not all of these will be included in the final version
 		virtual EventType GetEventType() const = 0;
@@ -54,8 +56,6 @@ namespace MyEngine {
 		{
 			return GetCategoryFlags() & category;
 		}
-	protected:
-		bool m_Handled = false;
 	};
 
 	// This calls allows us to provide IT functions that will run when certain events occur
@@ -76,7 +76,7 @@ namespace MyEngine {
 			// we execute the function on the event casted to the static type provided
 			if (m_Event.GetEventType() == T::GetStaticType()) // we don't compare classes here, just the enum for event types we declared
 			{
-				m_Event.m_Handled = func(*(T*)&m_Event); // cast m_Event to type T and dereference and apply func to it
+				m_Event.Handled = func(*(T*)&m_Event); // cast m_Event to type T and dereference and apply func to it
 				return true;
 			}
 			return false;
